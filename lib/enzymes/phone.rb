@@ -9,7 +9,7 @@ class Phone < Enzyme
 
     # XXX Dirty 7 digit phone number hack
     @data.scan( REGEXPS[:phone_10] ).each { |match| results << match }
-    results.each {|r| phone_@data.gsub! r, '' }
+    results.each {|r| @data.gsub! r, '' }
     @data.scan( REGEXPS[:phone_7] ).each { |match| results << match }
 
     results

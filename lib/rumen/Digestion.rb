@@ -10,7 +10,7 @@ class Rumen
       end
     else
       throw EnzymeNotFoundException if @@enzymes[ type ].nil?
-      results = @@enzymes[ type ].new( @dta.dup ).digest
+      results = @@enzymes[ type ].new( @data.dup ).digest
     end
 
     results
