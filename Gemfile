@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 group :development, :test do
+  gem 'awesome_print'
   gem 'rspec'
   gem 'rcov'
   gem 'ZenTest'
