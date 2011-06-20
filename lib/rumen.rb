@@ -6,7 +6,7 @@ require 'rumen/registration'
 require 'rumen/digestion'
 
 require 'enzyme'
-Dir[ './lib/enzymes/*.rb' ].each {|file| require file }
+Dir[ File.join( File.expand_path( File.dirname( __FILE__) ), 'enzymes', '*.rb' ) ].each {|file| require file }
 
 class Rumen
   attr_accessor :data
