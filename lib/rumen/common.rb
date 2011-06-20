@@ -8,7 +8,7 @@ class Rumen
       
     module ClassMethods
       def human_name
-        self.name.gsub( /([A-Z]+)([A-Z][a-z]+)/, '\1 \2' ).gsub( /([A-Z]+)/, ' \1' ).strip.downcase.squeeze ' '
+        self.name.gsub( /.*::/, '' ).gsub( /([A-Z]+)([A-Z][a-z]+)/, '\1 \2' ).gsub( /([A-Z]+)/, ' \1' ).strip.downcase.squeeze ' '
       end
 
       # Interesting solution found at: http://snippets.dzone.com/posts/show/2992

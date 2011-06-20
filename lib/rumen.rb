@@ -17,5 +17,9 @@ class Rumen
     @data = data
   end
 
+  def self.enzymes
+    @@enzymes
+  end
+
 end
 
