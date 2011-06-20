@@ -6,9 +6,7 @@ require 'rumen/registration'
 require 'rumen/digestion'
 
 require 'enzyme'
-Dir.chdir 'lib' do
-  Dir[ 'enzymes/*.rb' ].each {|file| require file }
-end
+Dir[ './lib/enzymes/*.rb' ].each {|file| require file }
 
 class Rumen
   attr_accessor :data
