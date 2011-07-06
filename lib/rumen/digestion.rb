@@ -9,7 +9,7 @@ class Rumen
         results[ name ] = klass.new( @data.dup ).digest
       end
     else
-      throw EnzymeNotFoundException if @@enzymes[ type ].nil?
+      throw EnzymeNotFoundException.new( type ) if @@enzymes[ type ].nil?
       results = @@enzymes[ type ].new( @data.dup ).digest
     end
 
